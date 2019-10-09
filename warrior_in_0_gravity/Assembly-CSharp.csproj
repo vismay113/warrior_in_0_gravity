@@ -63,8 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\bulletOps.cs" />
+    <Compile Include="Assets\script\enemyPath.cs" />
+    <Compile Include="Assets\script\EnemySpawner.cs" />
     <Compile Include="Assets\script\loseObject.cs" />
     <Compile Include="Assets\script\playerShip.cs" />
+    <Compile Include="Assets\script\waveConfig.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
