@@ -62,11 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\script\backgroundScroller.cs" />
     <Compile Include="Assets\script\bulletOps.cs" />
+    <Compile Include="Assets\script\DamageDealer.cs" />
+    <Compile Include="Assets\script\enemy.cs" />
     <Compile Include="Assets\script\enemyPath.cs" />
     <Compile Include="Assets\script\EnemySpawner.cs" />
+    <Compile Include="Assets\script\gameState.cs" />
     <Compile Include="Assets\script\loseObject.cs" />
+    <Compile Include="Assets\script\musicOPS.cs" />
     <Compile Include="Assets\script\playerShip.cs" />
+    <Compile Include="Assets\script\SceneManger.cs" />
     <Compile Include="Assets\script\waveConfig.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

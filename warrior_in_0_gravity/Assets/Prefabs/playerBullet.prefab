@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2730082198324331571}
   - component: {fileID: 7264071345850117372}
   - component: {fileID: 3712477868047618285}
-  m_Layer: 0
+  - component: {fileID: 1130448900694507885}
+  m_Layer: 10
   m_Name: playerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,3 +152,16 @@ PolygonCollider2D:
       - {x: 0.03, y: -0.45999998}
       - {x: 0.17999999, y: -0.17999999}
       - {x: 0.17999999, y: 0.17999999}
+--- !u!114 &1130448900694507885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829227328998060762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d266eb98069b88449d7206532e22634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
