@@ -6,21 +6,23 @@ using TMPro;
 public class gameState : MonoBehaviour
 {
     // Comnfiguration variables
-    [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
-    [SerializeField] int brickPoints = 5;
-    [SerializeField] TextMeshProUGUI final_score;
-    [SerializeField] bool autoPlayStatus;
 
     // state variables
-    [SerializeField] int playerScore = 0;
+    int playerScore = 0;
+    int healthScore = 0;
 
     // awake method is called before the start method.
     private void Awake()
     {
+        GameSessionSingleton();
+    }
+
+    private void GameSessionSingleton()
+    {
         int gameStateCount = FindObjectsOfType<gameState>().Length;
         if (gameStateCount > 1)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else
@@ -32,28 +34,18 @@ public class gameState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        final_score.text = playerScore.ToString();
+        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Time.timeScale = gameSpeed;
-    }
+    public int getScore() { return playerScore; }
 
-    public void addScore()
+    public void addScore(int killPoints)
     {
-        playerScore += brickPoints;
-        final_score.text = playerScore.ToString();
+        playerScore += killPoints;
     }
 
     public void resetGame()
     {
         Destroy(gameObject);
-    }
-
-    public bool autoplaySwitch()
-    {
-        return autoPlayStatus;
     }
 }

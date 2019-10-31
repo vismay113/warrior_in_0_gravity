@@ -123,4 +123,6 @@ public class playerShip : MonoBehaviour
 
         sceneOPS.LoadEndMenu();
     }
+
+    public int getHealthScore() { return health; }
 }

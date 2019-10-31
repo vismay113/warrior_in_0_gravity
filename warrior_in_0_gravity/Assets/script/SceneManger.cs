@@ -8,6 +8,12 @@ public class SceneManger : MonoBehaviour
     // configuration variable
     gameState loseStae;
     [SerializeField] float delayInSeconds = 2f;
+
+    private void Start()
+    {
+        loseStae = FindObjectOfType<gameState>();
+    }
+
     public void sceneLoader()
     {
         int currentSIndex = SceneManager.GetActiveScene().buildIndex;
@@ -16,13 +22,13 @@ public class SceneManger : MonoBehaviour
 
     public void goToStartMenu()
     {
-        //loseStae.resetGame();
+        loseStae.resetGame();
         SceneManager.LoadScene("StartMenu");
     }
 
     public void playAgain()
     {
-        //loseStae.resetGame();
+        loseStae.resetGame();
         SceneManager.LoadScene("core_game");
     }
 

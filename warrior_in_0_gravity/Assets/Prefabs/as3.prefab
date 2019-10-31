@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  scoreValue: 200
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
@@ -122,7 +123,7 @@ MonoBehaviour:
   deathSFXVolume: 0.75
   bulletSFX: {fileID: 8300000, guid: 50819415b31fe984eb720d0185a254fe, type: 3}
   bulletSFXVolume: 0.5
-  redBullet: {fileID: 4597201179698496479, guid: 11534b3cfde5c224bbd78065d9f3f118,
+  redBullet: {fileID: 7030174070023115991, guid: 4f7988da216536043aecf7c1ba42f352,
     type: 3}
 --- !u!60 &1090277631
 PolygonCollider2D:

@@ -5,12 +5,18 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     // configuration variables
+    [Header("Enemy Stats")]
     [SerializeField] float health = 100;
+    [SerializeField] int scoreValue = 150;
+
+    [Header("Shooting")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float bulletMoveSpeed = 2f;
+
+    [Header("Sound Effects")]
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfExplosion = 1f;
     [SerializeField] AudioClip deathSFX;
@@ -20,6 +26,7 @@ public class enemy : MonoBehaviour
 
     Coroutine enemyFiringCoroutine;
     playerShip player;
+    gameState stateE;
 
     // other attached game object variables
     [SerializeField] GameObject redBullet;
@@ -28,6 +35,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        stateE = FindObjectOfType<gameState>();
     }
 
     // Update is called once per frame
@@ -73,6 +81,7 @@ public class enemy : MonoBehaviour
 
     private void DieEnemy()
     {
+        stateE.addScore(scoreValue);
         Destroy(gameObject);
         GameObject explosionVFX = Instantiate(deathVFX, transform.position, transform.rotation) as GameObject;
         Destroy(explosionVFX, durationOfExplosion);
